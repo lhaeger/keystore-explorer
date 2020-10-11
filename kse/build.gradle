@@ -261,6 +261,7 @@ task appbundler(dependsOn: [jar, copyDependencies]) {
 			classpath(file: jar.archivePath)
 			arch(name: "x86_64")
 
+/*
 			jlink(runtime: System.properties.'java.home') {
 				jmod(name: "java.datatransfer")
 				jmod(name: "java.desktop")
@@ -280,6 +281,7 @@ task appbundler(dependsOn: [jar, copyDependencies]) {
 				argument(value: "--strip-debug")
 				argument(value: "--include-locales=en,de,fr")
 			}
+*/
 
 			bundledocument(extensions: "ks,jks,jceks,keystore,bks,uber,pfx,p12",
 							icon: keystoreIcns,
